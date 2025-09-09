@@ -1,4 +1,4 @@
-#randomVicc{
+#viccGomb{
   font-family: "Open Sans", sans-serif;
   font-size: 16px;
   letter-spacing: 2px;
@@ -15,14 +15,14 @@
   touch-action: manipulation;
 }
 
-.randomVicc:active {
+.viccGomb:active {
   box-shadow: 0px 0px 0px 0px;
   top: 5px;
   left: 5px;
 }
 
 @media (min-width: 768px) {
-  .randomVicc {
+  .viccGomb {
     padding: 0.25em 0.75em;
   }
 }
