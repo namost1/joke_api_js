@@ -34,8 +34,6 @@ async function getRandomJokeById() {
   }
 }
 
-//general, knock-knock, programming
-
 async function getRandomJokeProgramming() {
   try {
     const URL = "https://official-joke-api.appspot.com/jokes/programming/random"
@@ -45,7 +43,37 @@ async function getRandomJokeProgramming() {
     }
 
     const result = await response.json();
-    viccHelye.innerHTML = "Itt a vicc: " + result.setup + " " + result.punchline;
+    viccHelye.innerHTML = "Itt a vicc: " + result[0].setup + " " + result[0].punchline;
+  } catch (error) {
+    viccHelye.innerHTML = error;
+  }
+}
+
+async function getRandomJokeGeneral() {
+  try {
+    const URL = "https://official-joke-api.appspot.com/jokes/general/random"
+    const response = await fetch(URL);
+    if (!response.ok) {
+      throw new Error(`Api válasza: ${response.status}`);
+    }
+
+    const result = await response.json();
+    viccHelye.innerHTML = "Itt a vicc: " + result[0].setup + " " + result[0].punchline;
+  } catch (error) {
+    viccHelye.innerHTML = error;
+  }
+}
+
+async function getRandomJokeKnockKnock() {
+  try {
+    const URL = "https://official-joke-api.appspot.com/jokes/knock-knock/random"
+    const response = await fetch(URL);
+    if (!response.ok) {
+      throw new Error(`Api válasza: ${response.status}`);
+    }
+
+    const result = await response.json();
+    viccHelye.innerHTML = "Itt a vicc: " + result[0].setup + " " + result[0].punchline;
   } catch (error) {
     viccHelye.innerHTML = error;
   }
