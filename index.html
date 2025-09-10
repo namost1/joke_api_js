@@ -1,61 +1,43 @@
 <!DOCTYPE html>
-<html lang="en">
-  <h1>Vicces vicced: </h1>
-    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-      <div class="container-fluid">
-        <div class="collapse navbar-collapse" id="collapsibleNavbar">
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link">Id</a> 
-              <input type="number" id="viccid">
-              <button onclick="getRandomJokeById()"> Vicc kérése</button>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link">Random</a>
-              <button onclick="getRandomJoke()"> Vicc kérése</button>
-            </li>
+<html lang="hu">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vicces viccek</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
 
-                <li class="nav-item dropdown">
-                  <a
-                    class="nav-link dropdown-toggle"
-                    role="button"
-                    data-bs-toggle="dropdown"
-                    >Kategoria</a
-                  >
-                  <ul class="dropdown-menu">
-                    <li>
-                      <a class="kategoriaNev" id="kategoria1" >
-                        <button onclick="getRandomJokeGeneral()">
-                          General vicc kérése
-                        </button>
-                        </a>
-                    </li>
-                    <li>
-                      <a class="kategoriaNev" id="kategoria2" >
-                        <button onclick="getRandomJokeProgramming()">
-                          Programming vicc kérése
-                        </button>
-                      </a>
-                    </li>
-                    <li>
-                      <a class="kategoriaNev" id="kategoria3" >
-                        <button onclick="getRandomJokeKnockKnock()">
-                          Knock-knock vicc kérése
-                        </button>
-                        </a>
-                    </li>
-                  </ul>
-                </li>
-          </ul>
-        </div>
+  <body>
+    <h1>Vicces viccek</h1>
+
+    <div class="container">
+      <div class="card">
+        <h3>Vicc beállítások</h3>
+
+        <label for="viccid" class="form-label">ID (opcionális):</label>
+        <input
+          type="number"
+          id="viccid"
+          class="form-control"
+          placeholder="Pl. 5"
+        />
+
+        <label for="kategoria" class="form-label">Kategória:</label>
+        <select id="kategoria" class="form-select">
+          <option value="random">Random</option>
+          <option value="general">General</option>
+          <option value="programming">Programming</option>
+          <option value="knockknock">Knock-Knock</option>
+        </select>
+
+        <button class="viccGomb mt-3" onclick="kerjVicc()">Vicc kérése</button>
       </div>
     </div>
-  </nav>
 
+    <div id="viccHelye">
+      <p><i>Itt fog megjelenni a vicc...</i></p>
+    </div>
 
-
-  <div id="viccHelye"></div>
-  <script src="./script.js"></script>
-</body>
-
+    <script src="./script.js"></script>
+  </body>
 </html>
