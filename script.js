@@ -33,3 +33,20 @@ async function getRandomJokeById() {
     viccHelye.innerHTML = error;
   }
 }
+
+//general, knock-knock, programming
+
+async function getRandomJokeProgramming() {
+  try {
+    const URL = "https://official-joke-api.appspot.com/jokes/programming/random"
+    const response = await fetch(URL);
+    if (!response.ok) {
+      throw new Error(`Api válasza: ${response.status}`);
+    }
+
+    const result = await response.json();
+    viccHelye.innerHTML = "Itt a vicc: " + result.setup + " " + result.punchline;
+  } catch (error) {
+    viccHelye.innerHTML = error;
+  }
+}
