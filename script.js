@@ -12,7 +12,7 @@
         }
 
         const result = await response.json();
-        viccHelye.innerHTML = "Itt a vicc: " + result.setup + " " + result.punchline;
+        viccHelye.innerHTML = result.setup + " " + result.punchline;
       } catch (error) {
         viccHelye.innerHTML = error;
       }
@@ -28,7 +28,7 @@
         }
 
         const result = await response.json();
-        viccHelye.innerHTML = "Itt a vicc: " + result.setup + " " + result.punchline;
+        viccHelye.innerHTML = result.setup + " " + result.punchline;
       } catch (error) {
         viccHelye.innerHTML = error;
       }
@@ -43,7 +43,7 @@
         }
 
         const result = await response.json();
-        viccHelye.innerHTML = "Itt a vicc: " + result[0].setup + " " + result[0].punchline;
+        viccHelye.innerHTML = result[0].setup + " " + result[0].punchline;
       } catch (error) {
         viccHelye.innerHTML = error;
       }
@@ -58,7 +58,7 @@
         }
 
         const result = await response.json();
-        viccHelye.innerHTML = "Itt a vicc: " + result[0].setup + " " + result[0].punchline;
+        viccHelye.innerHTML =  result[0].setup + " " + result[0].punchline;
       } catch (error) {
         viccHelye.innerHTML = error;
       }
@@ -73,7 +73,7 @@
         }
 
         const result = await response.json();
-        viccHelye.innerHTML = "Itt a vicc: " + result[0].setup + " " + result[0].punchline;
+        viccHelye.innerHTML = result[0].setup + " " + result[0].punchline;
       } catch (error) {
         viccHelye.innerHTML = error;
       }
